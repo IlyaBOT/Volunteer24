@@ -4,61 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Волонтер.РФ | Вход в личный кабинет</title>
-    <link rel="stylesheet" href="auth.css">
+    <link rel="stylesheet" href="sigma.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="header">
-        <div class="container">
-            <a href="#" class="logo">Волонтер.РФ</a>
-            <nav class="nav">
-                <a href="#">О проекте</a>
-                <a href="#">Мероприятия</a>
-                <a href="#">Поддержка</a>
-            </nav>
-        </div>
-    </header>
-
-    <main class="main">
-        <div class="container">
-            <div class="login-box">
-                <h1>Вход в личный кабинет</h1>
-                <p class="subtitle">Для доступа к волонтерским программам и отчетности</p>
-                
-                <form class="login-form">
-                    <div class="form-group">
-                        <label for="login">Телефон, email или СНИЛС</label>
-                        <input type="text" id="login" placeholder="Введите данные" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="password">Пароль</label>
-                        <input type="password" id="password" placeholder="Введите пароль" required>
-                    </div>
-                    <button type="submit" class="btn">Войти</button>
-                </form>
-
-                <div class="links">
-                    <a href="#">Зарегистрироваться</a>
-                    <a href="#">Забыли пароль?</a>
-                </div>
-
-                <div class="social-login">
-                    <p>Или войти через:</p>
-                    <div class="social-icons">
-                        <a href="#" class="social-icon gosuslugi"></a>
-                        <a href="#" class="social-icon vk"></a>
-                        <a href="#" class="social-icon telegram"></a>
-                    </div>
-                </div>
+    <section>
+        <form>
+            <h1>Логин</h1>
+            <div class="inputbox">
+                <ion-icon name="mail-outline"></ion-icon>
+                <imput type="email" required>
+                <label for="">Email</label>
             </div>
-        </div>
-    </main>
-
-    <footer class="footer">
-        <div class="container">
-            <p>© 2025 Волонтер.РФ — платформа для добровольцев</p>
-            <a href="#">Политика конфиденциальности</a>
-        </div>
-    </footer>
-</body>
+            <div class="inputbox">
+                <ion-icon name="lock-closed-outline"></ion-icon>
+                <imput type="password" required>
+                <label for="">Пароль</label>
+            </div>
+            <div class="forget">
+                <label for=""><input Type="checkbax">Запомнить Меня</label>
+                <a href="8">Забыли Пароль</a>
+            </div>
+            <button>Log in</button>
+            <div class-"register">
+                <p>Нет Акаунта <a hrefe"=">Register</a></p>
+            </div>
+        </form>
+    </section>
+    </body>
 </html>
