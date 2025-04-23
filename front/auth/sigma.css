@@ -1,3 +1,7 @@
+:root {
+    --bg-image: url("../../assets/background.jpg");
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -9,32 +13,48 @@ body{
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background-image: url("../../assets/background.jpg");
+}
+
+.background{
+    background-image: var(--bg-image);
+    pointer-events: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    mix-blend-mode: exclusion;
+    z-index: -12;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    filter: blur(4px);
 }
+
 section {
     position: relative;
-    width: 300px;
-    max-width: 400px;
+    width: 350px;
+    max-width: 600px;
     background-color: transparent;
     border: 2px solid rgba(255, 255, 255, 0.5);
     border-radius: 20px;
     backdrop-filter: blur(25px);
-    display: flex;
+    display: flex
+;
     justify-content: center;
     align-items: center;
-    padding: 2rem 3rem;
+    padding: 1rem 1rem;
 }
-h1{
-    font-size: 2rem;
-    color: #fff; 
+h1 {
+    font-size: 4rem;
+    color: #fff;
     text-align: center;
+    margin: 0;
+    padding: 0;
 }
-.inputbox{
+.inputbox {
     position: relative;
-    margin: 30px 0;
+    margin: 20px 0;
     max-width: 310px;
     border-bottom: 2px solid #fff;
 }
@@ -54,12 +74,12 @@ input:valid-label{
 }
 .inputbox input {
     width: 100%;
-    height: 60px;
+    height: 30px;
     background: transparent;
     border: none;
     outline: none;
     font-size: 1rem;
-    padding: 0 35px 0 5px;
+    padding: 0 25px 0 5px;
     color: #fff;
 }
 .inputbox ion-icon {
@@ -80,24 +100,24 @@ input:valid-label{
     display: flex;
     align-items: center;
 }
-.forget a{
+.forget a {
+    display: flex;
+    width: 100%;
+    font-size: 1.5rem;
     color: #fff;
     text-decoration: none;
     font-weight: 600;
+    justify-content: space-around;
 }
 .forget a :hover{
     text-decoration: underline;
 }
-.remember {
-    margin: 35px 0;
-    font-size: 0.85rem;
-    color: #fff;
+.remember label {
+    color: white;
+    width: 100%;
     display: flex;
-    justify-content: space-between;
-}
-.remember label{
-    display: flex;
-    align-items: center;
+    justify-content: space-evenly;
+    font-size: 1.35rem;
 }
 .remember label input{
     margin-right: 3px;
@@ -110,18 +130,21 @@ input:valid-label{
 .remember a :hover{
     text-decoration: underline;
 }
-/* 🐾 Исправленные кнопки */
 button {
-    width: 100px;
     height: 40px;
     border-radius: 40px;
     background-color: rgba(255, 255, 255, 1);
     border: none;
     outline: none;
     cursor: pointer;
-    font-size: 1rem;
     font-weight: 600;
     transition: all 0.4s ease;
+    width: 100%;
+    font-size: 1.5rem;
+    color: black;
+    text-decoration: none;
+    text-align: center;
+    margin: 8px 0 8px;
 }
 button:hover {
     background-color: rgba(255, 255, 255, 0.5);
@@ -196,21 +219,4 @@ button.ghost {
         opacity: 1;
         transform: scale(1);
     }
-}
-
-.register{
-    font-size: 0.9rem;
-    color: white;
-    text-decoration: none;
-    text-align: center;
-    margin: 25px 0 10px;
-}
-.register p a {
-    text-decoration: none;
-    color: #fff;
-    font-weight: 600;
-}
-.register p a:hover {
-    color: white;
-    text-decoration: none;
 }

@@ -1,12 +1,14 @@
+
+
 body {
     margin: 0;
     font-family: 'Segoe UI', sans-serif;
     background: #fff;
     color: #1a1a1a;
     position: relative;
-  }
+}
   
-  body::before {
+body::before {
     content: "";
     position: fixed;
     top: 0;
@@ -17,16 +19,16 @@ body {
     background-size: cover;
     opacity: 0.5;
     z-index: -1;
-  }
+}
   
-  header {
+header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 40px;
     background: #fff;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  }
+}
   
   .logo {
     font-weight: bold;
@@ -88,6 +90,10 @@ body {
     font-size: 24px;
     border-radius: 8px;
     cursor: pointer;
+  }
+
+  .cta:hover {
+    background: #ff9a5c;
   }
   
   .leaderboard {
