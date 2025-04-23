@@ -4,6 +4,10 @@
     --bg-image: url("../../assets/background.jpg");
 }
 
+p{
+    color: white;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -71,6 +75,13 @@ h1 {
     margin: 0;
     padding: 0;
 }
+h2 {
+    font-size: 3rem;
+    color: #fff;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
 form-container {
     position: absolute;
     top: 0;
@@ -88,13 +99,13 @@ form-container {
 .sign-up-container{
     left: 0;
     width: 50%;
-    opacity: 0;
+    opacity: 0; /* Вход. Менять через JS скрипт */
     z-index: 1;
 }   
 .container.right-panel-active .sign-up-container
 {
     transform: translateX(100%);
-    opacity: 1;
+    opacity: 1; /* Регистрация. Менять через JS скрипт */
     z-index: 5;
     animation: show 0.6s;
 }
@@ -208,7 +219,7 @@ button.ghost {
 
 /* 🐾 Исправленный контейнер */
 .container {
-    background-color: #fff;
+    /*background-color: #fff;*/
     border-radius: 10px;
     box-shadow: 0 14px 28px rgba(0,0,0,0.25),
                 0 10px 10px rgba(0,0,0,0.22);
@@ -226,7 +237,7 @@ button.ghost {
     left: 0;
     width: 50%;
     height: 100%;
-    opacity: 0;
+    opacity: 1;
     z-index: 1;
     transition: all 0.6s ease-in-out;
 }
@@ -237,7 +248,7 @@ button.ghost {
     left: 50%;
     width: 50%;
     height: 100%;
-    opacity: 0;
+    opacity: 1;
     z-index: 1;
     transition: all 0.6s ease-in-out;
 }
