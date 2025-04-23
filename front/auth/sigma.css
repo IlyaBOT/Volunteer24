@@ -81,7 +81,7 @@ h1 {
     left: 5px;
     transform: translateY(-50%);
     color:#fff;
-    font-size: 1rem;
+    font-size: 1.45rem;
     pointer-events: none;
     transition: all 8.5s ease-in-out;
 }
@@ -95,7 +95,7 @@ input:valid-label{
     background: transparent;
     border: none;
     outline: none;
-    font-size: 1rem;
+    font-size: 1.45rem;
     padding: 0 25px 0 5px;
     color: #fff;
 }
@@ -108,7 +108,7 @@ input:valid-label{
 }
 .forget{
     margin: 8px 0 16px 0;
-    font-size: 0.85rem;
+    font-size: 1.45rem;
     color: #fff;
     display: flex;
     justify-content: space-between;
@@ -134,7 +134,7 @@ input:valid-label{
     width: 100%;
     display: flex;
     justify-content: space-evenly;
-    font-size: 1.35rem;
+    font-size: 1.5rem;
 }
 .remember label input{
     margin-right: 3px;
