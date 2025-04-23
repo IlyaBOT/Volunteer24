@@ -1,98 +1,86 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <title>Личный кабинет волонтёра | SPort-24</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
-    <style>
-        body { padding-top: 20px; }
-        .avatar { width: 150px; height: 150px; object-fit: cover; border-radius: 50%; }
-        .divider { border-top: 1px solid #ccc; margin: 10px 0; }
-        footer { margin-top: 50px; padding: 20px 0; background: #f8f9fa; text-align: center; }
-    </style>
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8">
+        <title>Личный кабинет волонтёра | SPort-24</title>
+        <link rel="stylesheet" href="account.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    </head>
+    <body>
 
-<div class="container">
-    <header class="d-flex justify-content-between align-items-center pb-3 mb-4 border-bottom">
-        <h1>SPort-24</h1>
-        <nav>
-            <ul class="nav nav-pills">
-                <li class="nav-item"><a href="#profile" class="nav-link active" data-bs-toggle="tab">Мой профиль</a></li>
-                <li class="nav-item"><a href="#rating" class="nav-link" data-bs-toggle="tab">Рейтинг</a></li>
-                <li class="nav-item"><a href="#history" class="nav-link" data-bs-toggle="tab">История</a></li>
-            </ul>
-        </nav>
-    </header>
+    <div class="container">
+        <header class="d-flex justify-content-between align-items-center pb-3 mb-4 border-bottom">
+            <h1>SPort-24</h1>
+            <nav>
+                <ul class="nav nav-pills">
+                    <li class="nav-item"><a href="#profile" class="nav-link active" data-bs-toggle="tab">Мой профиль</a></li>
+                    <li class="nav-item"><a href="#rating" class="nav-link" data-bs-toggle="tab">Рейтинг</a></li>
+                    <li class="nav-item"><a href="#history" class="nav-link" data-bs-toggle="tab">История</a></li>
+                </ul>
+            </nav>
+        </header>
 
-    <div class="tab-content">
-        <div class="tab-pane fade show active" id="profile">
-            <div class="row">
-                <div class="col-md-3 text-center">
-                    <img src="https://via.placeholder.com/150" class="avatar mb-3" alt="Аватар">
+        <div class="tab-content glass-container">
+            <div class="tab-pane fade show active" id="profile">
+                <div class="row">
+                    <div class="col-md-3 text-center">
+                        <img src="https://via.placeholder.com/150" class="avatar mb-3" alt="Аватар">
+                    </div>
+                    <div class="col-md-9">
+                        <h3>Иванов Иван Иванович</h3>
+                        <p><strong>Email:</strong> volunteer@example.com</p>
+                        <p><strong>Телефон:</strong> +7 (999) 123-45-67</p>
+                        <p><strong>Место в рейтинге:</strong> 42</p>
+                        <p><strong>Бонусы:</strong> Сертификат, Благодарность</p>
+                    </div>
                 </div>
-                <div class="col-md-9">
-                    <h3>Иванов Иван Иванович</h3>
-                    <p><strong>Email:</strong> volunteer@example.com</p>
-                    <p><strong>Телефон:</strong> +7 (999) 123-45-67</p>
-                    <p><strong>Место в рейтинге:</strong> 42</p>
-                    <p><strong>Бонусы:</strong> Сертификат, Благодарность</p>
-                </div>
+            </div>
+
+            <div class="tab-pane fade" id="rating">
+                <table class="table table-striped">
+                    <thead>
+                    <tr><th>№</th><th>ФИО</th><th>Email</th></tr>
+                    </thead>
+                    <tbody>
+                    <tr><td>1</td><td>Петров Пётр Петрович</td><td>petrov@example.com</td></tr>
+                    <tr><td colspan="3" class="divider"></td></tr>
+                    <tr><td>51</td><td>Сидорова Анна Викторовна</td><td>sidorova@example.com</td></tr>
+                    <tr><td colspan="3" class="divider"></td></tr>
+                    <tr><td>101</td><td>Кузнецов Олег Сергеевич</td><td>kuznetsov@example.com</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="tab-pane fade" id="history">
+                <table class="table">
+                    <thead>
+                    <tr><th>Название работы</th><th>Дата начала</th><th>Дата окончания</th><th>Работодатель</th><th>Бонусы</th></tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>Организация марафона</td>
+                        <td>01.03.2025</td>
+                        <td>05.03.2025</td>
+                        <td>СПорт-24</td>
+                        <td>Сертификат участника</td>
+                    </tr>
+                    <tr>
+                        <td>Экологическая акция</td>
+                        <td>10.02.2025</td>
+                        <td>-</td>
+                        <td>Зелёный город</td>
+                        <td>Благодарность, Значок активиста</td>
+                    </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
 
-        <div class="tab-pane fade" id="rating">
-            <table class="table table-striped">
-                <thead>
-                <tr><th>№</th><th>ФИО</th><th>Email</th></tr>
-                </thead>
-                <tbody>
-                <!-- Пример записи -->
-                <tr><td>1</td><td>Петров Пётр Петрович</td><td>petrov@example.com</td></tr>
-                <!-- ... Добавить ещё 49 строк ... -->
-                <tr><td colspan="3" class="divider"></td></tr>
-                <!-- 51 место -->
-                <tr><td>51</td><td>Сидорова Анна Викторовна</td><td>sidorova@example.com</td></tr>
-                <!-- ... Добавить ещё 49 строк ... -->
-                <tr><td colspan="3" class="divider"></td></tr>
-                <!-- 101 место -->
-                <tr><td>101</td><td>Кузнецов Олег Сергеевич</td><td>kuznetsov@example.com</td></tr>
-                <!-- ... -->
-                </tbody>
-            </table>
-        </div>
-
-        <div class="tab-pane fade" id="history">
-            <table class="table">
-                <thead>
-                <tr><th>Название работы</th><th>Дата начала</th><th>Дата окончания</th><th>Работодатель</th><th>Бонусы</th></tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <td>Организация марафона</td>
-                    <td>01.03.2025</td>
-                    <td>05.03.2025</td>
-                    <td>СПорт-24</td>
-                    <td>Сертификат участника</td>
-                </tr>
-                <tr>
-                    <td>Экологическая акция</td>
-                    <td>10.02.2025</td>
-                    <td>-</td>
-                    <td>Зелёный город</td>
-                    <td>Благодарность, Значок активиста</td>
-                </tr>
-                <!-- Добавить больше строк по мере необходимости -->
-                </tbody>
-            </table>
-        </div>
+        <footer>
+            &copy; 2025 SPort-24 — платформа для добровольцев | <a href="#">Политика конфиденциальности</a>
+        </footer>
     </div>
 
-    <footer>
-        &copy; 2025 SPort-24 — платформа для добровольцев | <a href="#">Политика конфиденциальности</a>
-    </footer>
-</div>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-</body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
 </html>
