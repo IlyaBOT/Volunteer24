@@ -16,6 +16,7 @@ body{
 }
 section {
     position: relative;
+    width: 300px;
     max-width: 400px;
     background-color: transparent;
     border: 2px solid rgba(255, 255, 255, 0.5);
