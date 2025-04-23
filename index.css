@@ -156,3 +156,20 @@ body {
     justify-content: space-between;
     align-items: center;
 }
+
+.rating {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    height: fit-content;
+}
+.rating h2 {
+    margin-top: 0;
+    font-size: 18px;
+    color: #1e88e5;
+}
+.rating ol {
+    padding-left: 20px;
+}
