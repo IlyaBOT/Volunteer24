@@ -1,9 +1,51 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
+
+p{
+  font-size: 1em;
+  font-weight: 400;
+}
+h1{
+  font-size: 3.5em;
+  font-weight: 600;
+  font-weight: bold;
+  unicode-bidi: isolate;
+}
+h2{
+  font-size: 2.5em;
+  font-weight: 500;
+  font-weight: bold;
+  unicode-bidi: isolate;
+}
+h3{
+  font-size: 2em;
+  font-weight: 450;
+  font-weight: bold;
+  unicode-bidi: isolate;
+}
+h4{
+  font-size: 1.65em;
+  font-weight: 400;
+  font-weight: bold;
+  unicode-bidi: isolate;
+}
+h5{
+  font-size: 1.45em;
+  font-weight: 400;
+  font-weight: bold;
+  unicode-bidi: isolate;
+}
+h6{
+  font-size: 1.25em;
+  font-weight: 400;
+  font-weight: bold;
+  unicode-bidi: isolate;
+}
+
 html, body {
   height: 100%;
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
-  color: #ffffff;
+  font-family: "Oswald", sans-serif;
 }
 
 body {
@@ -13,8 +55,9 @@ body {
 }
 
 .container {
-  width: 90%;
-  max-width: 1200px;
+  padding: 8px;
+  width: 80%;
+  max-width: 85%;
   margin: 0 auto;
   flex: 1;
 }
@@ -23,7 +66,6 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 0;
 }
 
 .glass-container {
@@ -36,33 +78,57 @@ header {
   width: 100%;
 }
 
+.logo {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  font-size: 48px;
+  color: #f18428;
+  align-items: center
+}
+
+.logo-icon {
+  height: 64px;
+  width: 64px;
+}
+
 .avatar {
-  width: 150px;
-  height: 150px;
+  width: 200px;
+  height: 200px;
   object-fit: cover;
   border-radius: 50%;
   border: 3px solid #ffffff;
 }
 
-.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
-  background-color: rgba(255, 255, 255, 0.2);
-  color: #ffffff;
+.nav-link{
+  text-decoration: none;
+  background-color: #EEEEEE;
+  font-size: 28px;
+  padding: 12px 24px;
+  margin: auto 4px auto 4px;
 }
 
-.nav-link {
-  color: #ffffff;
+.nav-link.active{
+  text-decoration: none;
+  color: white;
+  font-size: 28px;
+  padding: 12px 24px;
+  margin: auto 4px auto 4px;
 }
 
-a {
-  color: #aad4ff;
+.table{
+  font-size: 1.36em;
+  font-weight: 300;
 }
 
-a:hover {
-  color: #ffffff;
+th{
+  font-size: 1.42em;
+  font-weight: 800;
 }
 
-table {
-  color: #ffffff;
+.table-striped>tbody>tr:nth-of-type(odd)>* {
+  --bs-table-color-type: var(--bs-table-striped-color);
+  --bs-table-bg-type: var(--bs-table-striped-bg);
 }
 
 .table-striped tbody tr:nth-of-type(odd) {
@@ -73,16 +139,7 @@ table {
   border-top: 1px solid rgba(255, 255, 255, 0.5);
 }
 
-.footer {
-  background-color: #333;
-  color: white;
-  padding: 10px;
-  text-align: center;
-  width: 100%;
-  margin-top: auto;
-}
-
-.footer a {
-  color: #1e88e5;
-  text-decoration: none;
+.profile-text{
+  font-size: 24px;
+  padding: 6px;
 }
