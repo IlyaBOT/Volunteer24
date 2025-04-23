@@ -11,6 +11,9 @@ body {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
+    display: flex; /* Добавлено */
+    justify-content: space-between; /* Добавлено */
+    align-items: center; /* Добавлено */
 }
 
 /* Шапка */
@@ -37,6 +40,11 @@ body {
     color: white;
     text-decoration: none;
     font-weight: 500;
+    transition: opacity 0.3s; /* Добавлено для плавного эффекта */
+}
+
+.nav a:hover {
+    opacity: 0.8; /* Добавлено для эффекта при наведении */
 }
 
 /* Основной блок */
@@ -161,7 +169,7 @@ body {
 .footer {
     background-color: #333;
     color: white;
-    padding: 20px 0;
+    padding: 2px 0;
     text-align: center;
     margin-top: 30px;
 }
