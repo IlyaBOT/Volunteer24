@@ -55,6 +55,7 @@ body {
 }
 
 .container {
+  padding: 8px;
   width: 90%;
   max-width: 1200px;
   margin: 0 auto;
@@ -102,26 +103,27 @@ header {
   margin: auto 4px auto 4px;
 }
 
+.table{
+  font-size: 1.36em;
+  font-weight: 300;
+}
+
+th{
+  font-size: 1.42em;
+  font-weight: 800;
+}
+
+.table-striped>tbody>tr:nth-of-type(odd)>* {
+  --bs-table-color-type: var(--bs-table-striped-color);
+  --bs-table-bg-type: var(--bs-table-striped-bg);
+}
+
 .table-striped tbody tr:nth-of-type(odd) {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
 .divider {
   border-top: 1px solid rgba(255, 255, 255, 0.5);
-}
-
-.footer {
-  background-color: #333;
-  color: white;
-  padding: 10px;
-  text-align: center;
-  width: 100%;
-  margin-top: auto;
-}
-
-.footer a {
-  color: #1e88e5;
-  text-decoration: none;
 }
 
 .profile-text{
