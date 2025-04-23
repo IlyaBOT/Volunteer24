@@ -1,0 +1,53 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
+
+p{
+  font-size: 26px;
+  font-weight: 300;
+}
+h1{
+  font-size: 2em;
+  font-weight: 600;
+  font-weight: bold;
+  unicode-bidi: isolate;
+}
+h2{
+  font-size: 1.5em;
+  font-weight: 500;
+  font-weight: bold;
+  unicode-bidi: isolate;
+}
+h3{
+  font-size: 1.17em;
+  font-weight: 450;
+  font-weight: bold;
+  unicode-bidi: isolate;
+}
+h4{
+  font-size: 1em;
+  font-weight: 400;
+  font-weight: bold;
+  unicode-bidi: isolate;
+}
+h5{
+  font-size: 0.83em;
+  font-weight: 400;
+  font-weight: bold;
+  unicode-bidi: isolate;
+}
+h6{
+  font-size: 0.67em;
+  font-weight: 300;
+  font-weight: bold;
+  unicode-bidi: isolate;
+}
+
+.paragraph{
+  margin-left: 15px;
+  padding: 2px;
+}
+.centered{
+  text-align: center;
+}
+.topPadded{
+  padding-top: 8px;
+}
