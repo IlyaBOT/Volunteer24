@@ -5,7 +5,7 @@ p{
   font-weight: 400;
 }
 h1{
-  font-size: 4em;
+  font-size: 3.5em;
   font-weight: 600;
   font-weight: bold;
   unicode-bidi: isolate;
@@ -79,22 +79,28 @@ header {
 }
 
 .avatar {
-  width: 150px;
-  height: 150px;
+  width: 200px;
+  height: 200px;
   object-fit: cover;
   border-radius: 50%;
   border: 3px solid #ffffff;
 }
 
-.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
-  background-color: rgba(255, 255, 255, 0.2);
-  color: #000000;
+.nav-link{
+  text-decoration: none;
+  background-color: #EEEEEE;
+  font-size: 28px;
+  padding: 12px 24px;
+  margin: auto 4px auto 4px;
 }
 
-a {
-  color: #aad4ff;
+.nav-link.active{
+  text-decoration: none;
+  color: white;
+  font-size: 28px;
+  padding: 12px 24px;
+  margin: auto 4px auto 4px;
 }
-
 
 .table-striped tbody tr:nth-of-type(odd) {
   background-color: rgba(255, 255, 255, 0.1);
@@ -116,4 +122,9 @@ a {
 .footer a {
   color: #1e88e5;
   text-decoration: none;
+}
+
+.profile-text{
+  font-size: 24px;
+  padding: 6px;
 }
