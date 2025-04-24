@@ -24,7 +24,12 @@ class App:
         # Рендеринг страницы
         @self.app.get("/auth", response_class=HTMLResponse)
         async def about_me_page(request: Request):
-            return self.templates.TemplateResponse("../front/auth/auth.html", {"request": request})
+            return self.templates.TemplateResponse("front/auth/auth.html", {"request": request})
+
+        # Рендеринг страницы
+        @self.app.get("/account", response_class=HTMLResponse)
+        async def about_me_page(request: Request):
+            return self.templates.TemplateResponse("front/account/account.html", {"request": request})
         
         # Пример с post запросом
         #@self.app.post("/aboutme", response_class=HTMLResponse)

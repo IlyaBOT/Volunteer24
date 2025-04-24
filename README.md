@@ -13,3 +13,9 @@ python -m venv venv
 venv\Scripts\activate.bat
 pip install -r requirements.txt
 ```
+
+#### Starting up:
+```bash
+cd backend
+python3 app.py
+```
