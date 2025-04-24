@@ -36,11 +36,7 @@ class App:
             print("PASSWORD:", password)
 
 
-            if result.get("error"):
-                return self.templates.TemplateResponse("front/auth/auth.html", {
-                    "request": request,
-                    "error_message": result["error"]
-                })
+            
 
             print("POST /auth сработал!")
             print("Результат process_auth:", result)
@@ -65,4 +61,4 @@ class App:
 if __name__ == "__main__":
     # Запуск сервера через uvicorn
     server = App()
-    uvicorn.run(server.app, host="10.254.198.116", port=8080, workers=True)
+    uvicorn.run(server.app, host="10.254.198.144", port=8080, workers=True)

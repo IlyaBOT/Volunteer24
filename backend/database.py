@@ -3,7 +3,7 @@ from sqlalchemy import create_engine, Table, Column, String, MetaData, BigIntege
 from sqlalchemy.sql import select
 
 class UserDatabaseManager:
-    def __init__(self, db_user='dbuser', db_password='IB2025IB', db_host='10.254.198.144', db_port='3306', db_name='db_sport24', csv_file='test_data.csv'):
+    def __init__(self, db_user='dbuser', db_password='IB2025IB', db_host='localhost', db_port='3306', db_name='db_sport24', csv_file='test_data.csv'):
         self.database_url = f"mysql+pymysql://{db_user}:{db_password}@{db_host}:{db_port}/{db_name}"
         self.engine = create_engine(self.database_url)
         self.metadata = MetaData()

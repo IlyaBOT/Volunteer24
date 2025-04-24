@@ -8,6 +8,7 @@ def process_auth(part_name=None, email=None, password=None):
     found = False
 
     for user in users:
+        print(user.email.lower() + " сравниваеся с " + email.lower())
         if user.email.lower() == email.lower():
             found = True
             break
