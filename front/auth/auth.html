@@ -15,7 +15,7 @@
 <body>
 <div class="container" id="container">
 	<div class="form-container sign-up-container">
-		<form action="#">
+		<form action="/auth" method="post">
 			<h1>Регистрация для Партнёров</h1>
 			<input type="text" name="part_name" placeholder="Наименование партнёра" />
 			<input type="email" name="email" placeholder="Email" />
@@ -24,7 +24,7 @@
 		</form>
 	</div>
 	<div class="form-container sign-in-container">
-		<form action="#">
+		<form action="/auth" method="post">
 			<h1>Авторизация</h1>
 			<input type="email" name="email" placeholder="Email" />
 			<input type="password" name="password" placeholder="Пароль" />

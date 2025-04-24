@@ -2,6 +2,7 @@ from fastapi import FastAPI, Request, Form
 from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
+from auth import process_auth 
 import uvicorn
 
 
@@ -23,16 +24,23 @@ class App:
 
         @self.app.get("/auth", response_class=HTMLResponse)
         async def auth_page(request: Request):
+            return self.templates.TemplateResponse("front/auth/auth.html", {"request": request})
+
+        @self.app.post("/auth", response_class=HTMLResponse)
+        async def handle_auth(request: Request, part_name: str = Form(None), email: str = Form(...), password: str = Form(...)):
+            from auth import process_auth  # ты сам создашь этот файл
+            result = process_auth(part_name=part_name, email=email, password=password)
             return self.templates.TemplateResponse("front/auth/auth.html", {
-                "request": request
+                "request": request,
+                "message": result
             })
 
         @self.app.get("/account", response_class=HTMLResponse)
-        async def about_me_page(request: Request):
+        async def account_page(request: Request):
             return self.templates.TemplateResponse("front/account/account.html", {"request": request})
 
 
 if __name__ == "__main__":
     # Запуск сервера через uvicorn
     server = App()
-    uvicorn.run(server.app, host="10.254.198.116", port=8080, workers=True)
+    uvicorn.run(server.app, host="10.254.198.144", port=8080, workers=True)
