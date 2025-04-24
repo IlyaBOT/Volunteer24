@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <title>Личный кабинет | SPort-24</title>
+        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="account.css">
+
+        <link rel="icon" type="image/png" href="../../favicon-96x96.png" sizes="96x96" />
+        <link rel="icon" type="image/svg+xml" href="../../favicon.svg" />
+        <link rel="shortcut icon" href="../../favicon.ico" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../../apple-touch-icon.png" />
+        <link rel="manifest" href="../../site.webmanifest" />
+    </head>
+    <body>
+    <div class="background"></div>
+        <header class="d-flex justify-content-between align-items-center pb-3 mb-4 border-bottom">
+            <div class="logo">
+                <img src="../../favicon.svg" alt="SPort-24 logo" class="logo-icon" />
+                <span>SPort-24</span>
+            </div>
+            <nav>
+                <ul class="nav nav-pills">
+                    <li class="nav-item"><a href="#profile" class="nav-link active" data-bs-toggle="tab">Мой профиль</a></li>
+                    <li class="nav-item"><a href="#rating" class="nav-link" data-bs-toggle="tab">Рейтинг</a></li>
+                    <li class="nav-item"><a href="#history" class="nav-link" data-bs-toggle="tab">Поиск по UID</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="tab-content glass-container">
+            <div class="tab-pane fade show active" id="profile">
+                <div class="row">
+                    <div class="col-md-3 text-center">
+                        <img src="../../assets/account.svg" class="avatar mb-3" alt="Аватар">
+                    </div>
+                    <div class="col-md-9">
+                        <h1>Иванов Иван Иванович</h1>
+                        <p class="profile-text"><strong>Наименование:</strong> ДонМАК</p>
+                        <p class="profile-text"><strong>Email:</strong> volunteer@example.com</p>
+                        <p class="profile-text"><strong>Бонусы:</strong> Сертификат, Благодарность</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade" id="rating">
+                <table class="table table-striped">
+                    <thead>
+                    <tr><th>№</th><th>ID Волонтёра</th></tr>
+                    </thead>
+                    <tbody>
+                    <tr><td>1</td><td>12345678</td></tr>
+                    <tr><td>2</td><td>12345679</td></tr>
+                    <tr><td>51</td><td>20252077</td></tr>
+                    <tr><td>55</td><td>20252078</td></tr>
+                    <tr><td>101</td><td>87654321</td></tr>
+                    <tr><td>102</td><td>87654322</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="tab-pane fade" id="history">
+                <table class="table table-striped">
+                    <h2>Поиск волонтёра</h2>
+                    <form id="search-form">
+                    <label for="volunteer-uid">Введите UID волонтёра:</label>
+                    <input type="text" id="volunteer-uid" name="volunteer-uid" required />
+                    <button type="submit">Поиск</button>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>
