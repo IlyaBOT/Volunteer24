@@ -20,28 +20,19 @@ class App:
             return self.templates.TemplateResponse("index.html", {
                 "request": request
             })
-        
-        # Рендеринг страницы
-        @self.app.get("/auth", response_class=HTMLResponse)
-        async def about_me_page(request: Request):
-            return self.templates.TemplateResponse("front/auth/auth.html", {"request": request})
 
-        # Рендеринг страницы
+        @self.app.get("/auth", response_class=HTMLResponse)
+        async def auth_page(request: Request):
+            return self.templates.TemplateResponse("front/auth/auth.html", {
+                "request": request
+            })
+
         @self.app.get("/account", response_class=HTMLResponse)
         async def about_me_page(request: Request):
             return self.templates.TemplateResponse("front/account/account.html", {"request": request})
-        
-        # Пример с post запросом
-        #@self.app.post("/aboutme", response_class=HTMLResponse)
-        #async def post_exemple(request: Request, name: str =  Form(...)):
-        #    message = f"Я, {name}"
-        #    return self.templates.TemplateResponse("../front/auth/auth.html", {
-        #        "request": request,
-        #        "message": message
-        #    })
 
 
 if __name__ == "__main__":
     # Запуск сервера через uvicorn
     server = App()
-    uvicorn.run(server.app, host="localhost", port=8080, workers=True)
+    uvicorn.run(server.app, host="10.254.198.116", port=8080, workers=True)
