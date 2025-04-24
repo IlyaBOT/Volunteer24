@@ -33,7 +33,7 @@ function editProfile() {
             document.getElementById('dob').textContent = updatedData.dob;
             button.textContent = 'Редактировать профиль';
         }).catch(error => {
-            alert('Ошибка при сохранении 😿');
+            alert('Ошибка при сохранении ');
             console.error('Ошибка:', error);
         });
     }

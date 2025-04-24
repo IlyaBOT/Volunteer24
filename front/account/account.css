@@ -131,6 +131,44 @@ header {
   color: white;
   background-color: #cf3072;
 }
+.orders-container {
+  max-height: 500px; /* Ограничиваем высоту контейнера */
+  overflow-y: auto;  /* Добавляем вертикальную прокрутку */
+}
+
+.order-block {
+  border: 1px solid #ccc;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  transition: transform 0.3s ease;
+}
+
+.order-block:hover {
+  transform: scale(1.05); /* Эффект увеличения при наведении */
+}
+
+.order-block h5 {
+  margin-top: 0;
+  font-size: 18px;
+  color: #333;
+}
+
+.order-block .btn {
+  margin-top: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.order-block .btn:hover {
+  background-color: #0056b3;
+}
 
 .table{
   font-size: 1.36em;

@@ -33,7 +33,7 @@ function editProfile() {
             bonuses.textContent = updatedData.bonuses;
             button.textContent = 'Редактировать профиль';
         }).catch(error => {
-            alert('Ошибка при сохранении 😿');
+            alert('Ошибка при сохранении ');
             console.error('Error:', error);
         });
     }
