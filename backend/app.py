@@ -26,36 +26,24 @@ class App:
         async def auth_page(request: Request):
             return self.templates.TemplateResponse("front/auth/auth.html", {"request": request})
 
-        @self.app.get("/account", response_class=HTMLResponse)
-        async def about_me_page(request: Request):
-            from auth import sessions  # Импорт из auth.py
+        @self.app.post("/auth", response_class=HTMLResponse)
+        async def handle_auth(request: Request, part_name: str = Form(None), email: str = Form(...), password: str = Form(...)):
+            from auth import process_auth
+            result = process_auth(part_name=part_name, email=email, password=password)
 
-            uid = request.cookies.get("user_uid")
-            if not uid or uid not in sessions:
-                return RedirectResponse(url="/auth", status_code=303)
+            print("Результат process_auth:", result)
 
-            email = sessions[uid]
-
-            db = UserDatabaseManager()
-            users = db.read_all_users()
-
-            user_data = next((u._mapping for u in users if u._mapping['email'] == email), None)
-            if not user_data:
-                return self.templates.TemplateResponse("front/account/account.html", {
+            if result.get("error"):
+                print("Ошибка авторизации:", result["error"])
+                return self.templates.TemplateResponse("front/auth/auth.html", {
                     "request": request,
-                    "error": "Пользователь не найден"
+                    "error_message": result["error"]
                 })
 
-            return self.templates.TemplateResponse("front/account/account.html", {
-                "request": request,
-                "full_name": user_data['full_name'],
-                "email": user_data['email'],
-                "inn": user_data['inn'],
-                "number": user_data['phone'],
-                "born": user_data['birth_date'],
-                "raiting": user_data.get('achievements', '–'),
-                "bonus": "42 очка доверия"  # можно заменить на реальное поле
-            })
+
+            # Перенаправление на /account
+            from fastapi.responses import RedirectResponse
+            return RedirectResponse(url="/account", status_code=303)
 
         @self.app.get("/account", response_class=HTMLResponse)
         async def account_page(request: Request):
