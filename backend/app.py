@@ -31,14 +31,6 @@ class App:
             from auth import process_auth
             result = process_auth(part_name=part_name, email=email, password=password)
 
-            print("🔥 handle_auth вызван!")
-            print("EMAIL:", email)
-            print("PASSWORD:", password)
-
-
-            
-
-            print("POST /auth сработал!")
             print("Результат process_auth:", result)
 
             if result.get("error"):
