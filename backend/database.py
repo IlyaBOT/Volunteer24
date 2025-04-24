@@ -7,7 +7,7 @@ class UserDatabaseManager:
         self.database_url = f"mysql+pymysql://{db_user}:{db_password}@{db_host}:{db_port}/{db_name}"
         self.engine = create_engine(self.database_url)
         self.metadata = MetaData()
-        self.users_table = Table('allowed_users', self.metadata,
+        self.users_table = Table('users', self.metadata,
             Column('full_name', String(255), primary_key=True),
             Column('inn', BigInteger),
             Column('phone', BigInteger),
@@ -26,7 +26,7 @@ class UserDatabaseManager:
         df['phone'] = df['phone'].str.replace(r'\D', '', regex=True)
         df['phone'] = df['phone'].str.replace(r'^8', '7', regex=True)
         df['phone'] = df['phone'].astype('int64')
-        df.to_sql('allowed_users', con=self.engine, if_exists='replace', index=False)
+        df.to_sql('users', con=self.engine, if_exists='replace', index=False)
         print("Данные успешно загружены в базу!")
 
     def read_all_users(self):
@@ -36,7 +36,7 @@ class UserDatabaseManager:
 
     def print_all_users(self):
         users = self.read_all_users()
-        print("\n📋 Все записи в таблице allowed_users:")
+        print("\n📋 Все записи в таблице users:")
         for user in users:
             print(user)
 
