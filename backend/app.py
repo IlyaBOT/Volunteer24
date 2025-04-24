@@ -31,11 +31,27 @@ class App:
             from auth import process_auth
             result = process_auth(part_name=part_name, email=email, password=password)
 
+            print("🔥 handle_auth вызван!")
+            print("EMAIL:", email)
+            print("PASSWORD:", password)
+
+
             if result.get("error"):
                 return self.templates.TemplateResponse("front/auth/auth.html", {
                     "request": request,
                     "error_message": result["error"]
                 })
+
+            print("POST /auth сработал!")
+            print("Результат process_auth:", result)
+
+            if result.get("error"):
+                print("Ошибка авторизации:", result["error"])
+                return self.templates.TemplateResponse("front/auth/auth.html", {
+                    "request": request,
+                    "error_message": result["error"]
+                })
+
 
             # Перенаправление на /account
             from fastapi.responses import RedirectResponse
@@ -49,4 +65,4 @@ class App:
 if __name__ == "__main__":
     # Запуск сервера через uvicorn
     server = App()
-    uvicorn.run(server.app, host="10.254.198.144", port=8080, workers=True)
+    uvicorn.run(server.app, host="10.254.198.116", port=8080, workers=True)

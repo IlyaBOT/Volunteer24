@@ -20,7 +20,7 @@
 			<input type="text" name="part_name" placeholder="Наименование партнёра" />
 			<input type="email" name="email" placeholder="Email" />
 			<input type="password" name="password" placeholder="Пароль" />
-			<button>Зарегистрироваться</button>
+			<button type="submit">Зарегистрироваться</button>
 		</form>
 		{% if error_message %}
     		<p style="color:red;">{{ error_message }}</p>
@@ -32,7 +32,7 @@
 			<input type="email" name="email" placeholder="Email" />
 			<input type="password" name="password" placeholder="Пароль" />
 			<a href="#">Забыли пароль?</a>
-			<button>Войти</button>
+			<button type="submit">Войти</button>
 		</form>
 		{% if error_message %}
     		<p style="color:red;">{{ error_message }}</p>
@@ -54,5 +54,5 @@
 	</div>
 </div>
 
+<!-- <script src="../../assets/auth/auth.js"></script> -->
 
-<script src="../../assets/auth/auth.js"></script>
