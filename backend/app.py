@@ -9,7 +9,7 @@ class App:
     def __init__(self):
         self.app = FastAPI() 
         self.templates = Jinja2Templates(directory="../") # Папка с html шаблонами
-        self.app.mount("/assets", StaticFiles(directory="../"), name="assets") # Подключаем статику для стилей и картинок
+        self.app.mount("/assets", StaticFiles(directory="../assets"), name="assets") # Подключаем статику для стилей и картинок
         self._setup_routes() # Инициирование путей
 
     def _setup_routes(self):
@@ -22,9 +22,9 @@ class App:
             })
         
         # Рендеринг страницы
-        #@self.app.get("/aboutme", response_class=HTMLResponse)
-        #async def about_me_page(request: Request):
-        #    return self.templates.TemplateResponse("../front/auth/auth.html", {"request": request})
+        @self.app.get("/auth", response_class=HTMLResponse)
+        async def about_me_page(request: Request):
+            return self.templates.TemplateResponse("../front/auth/auth.html", {"request": request})
         
         # Пример с post запросом
         #@self.app.post("/aboutme", response_class=HTMLResponse)
