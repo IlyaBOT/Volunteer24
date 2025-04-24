@@ -6,18 +6,20 @@ db = UserDatabaseManager()
 def process_auth(part_name=None, email=None, password=None):
     db = UserDatabaseManager()
     users = db.read_all_users()
-    found = False
+    
+    print("🔍 Email, который ищем:", email)
+    print("📋 Email'ы в базе:")
 
     for user in users:
-        db_email = user._mapping['email']  # Получаем поле из строки
-        if db_email.lower() == email.lower():
-            found = True
-            break
+        print("-", user._mapping['email'])
 
-    if not found:
-        return {"error": "Пользователь с указанным email не найден"}
+    for user in users:
+        db_email = user._mapping['email']
+        if db_email.lower().strip() == email.lower().strip():
+            print("✅ Найден!")
+            return {
+                "success": True,
+                "uid": str(uuid.uuid4())
+            }
 
-    import uuid
-    user_uid = str(uuid.uuid4())
-    print(f"✅ UID для {email}: {user_uid}")
-    return {"success": True, "uid": user_uid}
+    return {"error": "Пользователь с указанным email не найден"}
