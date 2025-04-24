@@ -26,7 +26,12 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 4px 40px;
-  background: #fff;
+  background: #FF416C;
+	background: -webkit-linear-gradient(to right, #FF416C, #FF4B2B );
+	background: linear-gradient(to right, #FF416C, #FF4B2B );
+	background-repeat: no-repeat; 
+	background-size: cover;
+	background-position: 0 0;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
   
@@ -35,7 +40,7 @@ header {
   align-items: center;
   font-weight: bold;
   font-size: 48px;
-  color: #f18428;
+  color: #fff;
   align-items: center
 }
 
@@ -53,8 +58,8 @@ nav a {
 }
 
 nav a.partner {
-  background: #0080ff;
-  color: #fff;
+  background: #fff;
+  color: #FF416C;
   font-size: 24px;
   padding: 8px 16px;
   border-radius: 5px;
@@ -97,13 +102,13 @@ main {
   margin: 0;
   font-size: 27px;
   line-height: 1.1;
-  color: #0080ff;
+  color: #FF4B2B;
 }
 
 .cta {
   display: flex;
   margin: 16px auto 16px auto;
-  background: #ff7f32;
+  background: #FF416C;
   color: white;
   border: none;
   padding: 8px 10%;
