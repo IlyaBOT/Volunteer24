@@ -1,0 +1,157 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
+
+body {
+  margin: 0;
+  font-family: "Oswald", sans-serif;
+  background: #fff;
+  color: #1a1a1a;
+  position: relative;
+}
+  
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("../../assets/background-humans.png") no-repeat center center fixed;
+  background-size: cover;
+  opacity: 0.5;
+  z-index: -1;
+}
+  
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4px 40px;
+  background: #FF416C;
+	background: -webkit-linear-gradient(to right, #FF416C, #FF4B2B );
+	background: linear-gradient(to right, #FF416C, #FF4B2B );
+	background-repeat: no-repeat; 
+	background-size: cover;
+	background-position: 0 0;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+  
+.logo {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  font-size: 48px;
+  color: #fff;
+  align-items: center
+}
+
+.logo-icon {
+  height: 64px;
+  width: 64px;
+}
+  
+nav a {
+  margin-left: 20px;
+  font-size: 20px;
+  text-decoration: none;
+  color: #004080;
+  font-weight: 500;
+}
+
+nav a.partner {
+  background: #fff;
+  color: #FF416C;
+  font-size: 24px;
+  padding: 8px 16px;
+  border-radius: 5px;
+}
+
+main {
+  display: flex;
+  font-size: 20px;
+  position: relative;
+  top: 5rem;
+  bottom: 5rem;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: linear-gradient(135deg, rgba(255,255,255,0.75), rgba(255,255,255,0.75));
+}
+
+.main {
+  display: flex;
+  position: relative;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: linear-gradient(135deg, rgba(255,255,255,0.75), rgba(255,255,255,0.75));
+}
+
+.intro {
+  max-width: 500px;
+  margin-right: 40px;
+}
+
+.big-title{
+  font-size: 64px;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.small-title{
+  margin: 0;
+  font-size: 27px;
+  line-height: 1.1;
+  color: #FF4B2B;
+}
+
+.cta {
+  display: flex;
+  margin: 16px auto 16px auto;
+  background: #FF416C;
+  color: white;
+  border: none;
+  padding: 8px 10%;
+  font-size: 28px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: "Oswald", sans-serif;
+}
+
+.cta:hover {
+  background: #ff9a5c;
+}
+
+.leaderboard {
+  margin-top: 30px;
+}
+
+.leaderboard ol {
+  list-style: none;
+  padding: 0;
+}
+
+.leaderboard li {
+  margin: 8px 0;
+  font-weight: bold;
+}
+.text-block {
+  max-width: 700px; /* увеличила ширину */
+}
+
+.bar {
+  display: inline-block;
+  height: 8px;
+  width: 120px;
+  background: #004080;
+  margin-left: 10px;
+  border-radius: 4px;
+}
+
+.volunteers img {
+  max-width: 500px;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
