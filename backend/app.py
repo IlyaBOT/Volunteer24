@@ -21,12 +21,10 @@ class App:
                 "request": request
             })
 
-        @self.app.post("/auth", response_class=HTMLResponse)
-        async def auth_page(request: Request, name: str =  Form(...)):
-            message = f"Я, {name}"
+        @self.app.get("/auth", response_class=HTMLResponse)
+        async def auth_page(request: Request):
             return self.templates.TemplateResponse("front/auth/auth.html", {
-                "request": request,
-                "message": message
+                "request": request
             })
 
         @self.app.get("/account", response_class=HTMLResponse)
