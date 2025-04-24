@@ -5,6 +5,7 @@ db = UserDatabaseManager()
 
 def process_auth(part_name=None, email=None, password=None):
     db = UserDatabaseManager()
+    db.print_all_users()
     users = db.read_all_users()
     
     print("🔍 Email, который ищем:", email)
