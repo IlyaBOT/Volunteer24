@@ -18,8 +18,7 @@ class App:
         @self.app.get("/", response_class=HTMLResponse)
         async def root_route(request: Request):
             return self.templates.TemplateResponse("index.html", {
-                "request": request,
-                "title": "Hello world!"
+                "request": request
             })
         
         # Рендеринг страницы
