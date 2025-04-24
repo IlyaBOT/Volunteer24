@@ -22,6 +22,9 @@
 			<input type="password" name="password" placeholder="Пароль" />
 			<button>Зарегистрироваться</button>
 		</form>
+		{% if error_message %}
+    		<p style="color:red;">{{ error_message }}</p>
+		{% endif %}
 	</div>
 	<div class="form-container sign-in-container">
 		<form action="/auth" method="post">
@@ -31,6 +34,9 @@
 			<a href="#">Забыли пароль?</a>
 			<button>Войти</button>
 		</form>
+		{% if error_message %}
+    		<p style="color:red;">{{ error_message }}</p>
+		{% endif %}
 	</div>
 	<div class="overlay-container">
 		<div class="overlay">

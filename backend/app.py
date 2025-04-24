@@ -28,12 +28,18 @@ class App:
 
         @self.app.post("/auth", response_class=HTMLResponse)
         async def handle_auth(request: Request, part_name: str = Form(None), email: str = Form(...), password: str = Form(...)):
-            from auth import process_auth  # ты сам создашь этот файл
+            from auth import process_auth
             result = process_auth(part_name=part_name, email=email, password=password)
-            return self.templates.TemplateResponse("front/auth/auth.html", {
-                "request": request,
-                "message": result
-            })
+
+            if result.get("error"):
+                return self.templates.TemplateResponse("front/auth/auth.html", {
+                    "request": request,
+                    "error_message": result["error"]
+                })
+
+            # Перенаправление на /account
+            from fastapi.responses import RedirectResponse
+            return RedirectResponse(url="/account", status_code=303)
 
         @self.app.get("/account", response_class=HTMLResponse)
         async def account_page(request: Request):
