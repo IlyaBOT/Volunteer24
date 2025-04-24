@@ -37,13 +37,13 @@
                         <img src="../../assets/account.svg" class="avatar mb-3" alt="Аватар">
                     </div>
                     <div class="col-md-9" id="profile">
-                        <h1 id="fullName">Иванов Иван Иванович</h1>
-                        <p class="profile-text"><strong>Email:</strong> <span id="email">volunteer@example.com</span></p>
-                        <p class="profile-text"><strong>ИНН:</strong> <span id="inn">1234567890</span></p>
-                        <p class="profile-text"><strong>Телефон:</strong> <span id="phone">+7(999)123-45-67</span></p>
-                        <p class="profile-text"><strong>День рождения:</strong> <span id="dob">24 апреля 2005</span></p>
-                        <p class="profile-text"><strong>Место в рейтинге:</strong> <span id="rank">42</span></p>
-                        <p class="profile-text"><strong>Бонусы:</strong> <span id="bonuses">Сертификат, Благодарность</span></p>
+                        <h1 id="fullName">{{ full_name }}</h1>
+                        <p class="profile-text"><strong>Email:</strong> {{ email}}<span id="email">volunteer@example.com</span></p>
+                        <p class="profile-text"><strong>ИНН:</strong>{{inn}} <span id="inn">1234567890</span></p>
+                        <p class="profile-text"><strong>Телефон:</strong> {{number}}<span id="phone">+7(999)123-45-67</span></p>
+                        <p class="profile-text"><strong>День рождения:</strong> {{born}}<span id="dob">24 апреля 2005</span></p>
+                        <p class="profile-text"><strong>Место в рейтинге:</strong>{{raiting}} <span id="rank">42</span></p>
+                        <p class="profile-text"><strong>Бонусы:</strong> {{bonus}} <span id="bonuses">Сертификат, Благодарность</span></p>
                     </div>
                     
                     <button onclick="editProfile()" id="editBtn">Редактировать профиль</button>
