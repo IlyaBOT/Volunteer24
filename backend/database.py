@@ -36,7 +36,7 @@ class UserDatabaseManager:
 
     def print_all_users(self):
         users = self.read_all_users()
-        print("\n📋 Все записи в таблице users:")
+        print("\nВсе записи в таблице users:")
         for user in users:
             print(user)
 
