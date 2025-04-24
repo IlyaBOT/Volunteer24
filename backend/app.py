@@ -9,7 +9,7 @@ class App:
     def __init__(self):
         self.app = FastAPI() 
         self.templates = Jinja2Templates(directory="../") # Папка с html шаблонами
-        self.app.mount("/static", StaticFiles(directory="static"), name="static") # Подключаем статику для стилей и картинок
+        self.app.mount("/assets", StaticFiles(directory="../"), name="assets") # Подключаем статику для стилей и картинок
         self._setup_routes() # Инициирование путей
 
     def _setup_routes(self):
