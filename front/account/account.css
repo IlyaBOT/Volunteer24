@@ -66,6 +66,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 12px;
   background: #FF416C;
 	background: -webkit-linear-gradient(to right, #FF416C, #FF4B2B );
 	background: linear-gradient(to right, #FF416C, #FF4B2B );
