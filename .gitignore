@@ -2,3 +2,11 @@
 venv/
 .venv/
 env/
+.pyc
+.cpython
+_pycache_
+_pycache_/
+__pycache__
+__pycache__/
+.cpython-38
+.cpython-38.pyc
