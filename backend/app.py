@@ -5,7 +5,6 @@ from fastapi.templating import Jinja2Templates
 from auth import process_auth 
 import uvicorn
 
-
 class App:
     def __init__(self):
         self.app = FastAPI() 
