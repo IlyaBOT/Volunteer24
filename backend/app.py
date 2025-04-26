@@ -26,6 +26,10 @@ class App:
         async def auth_page(request: Request):
             return self.templates.TemplateResponse("front/auth/auth.html", {"request": request})
 
+        @self.app.get("/zakzak", response_class=HTMLResponse)
+        async def zakaz_page(request: Request):
+            return self.templates.TemplateResponse("front/indexaccount/index.html", {"request": request})
+
         @self.app.post("/auth", response_class=HTMLResponse)
         async def handle_auth(request: Request, part_name: str = Form(None), email: str = Form(...), password: str = Form(...)):
             from auth import process_auth
